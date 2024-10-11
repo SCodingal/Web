@@ -1,24 +1,58 @@
 <html>
     <head>
-        <title>Intro to DOM</title>
+        <title>Handeling in java 
+        script</title>
+        
+        <style>
+            body.dark{
+                color:white;
+                background: black;
+            }
+            button{
+                display:block;
+                margin:5px;
+            }
+            .textEntry{
+                margin-top:12px;
+                margin-bottom:15px;
+            }
+        </style>
     </head>
     <body>
-        <h1>DOM</h1>
-        <p>
-            DOM stands for:Document Object Model
-        </p>
-        <p id="Demo"></p>
-        
-        <script>
+        <h1>Basement</h1>
+       <p id="story"> 
+        I wanted to find my friend and he is in the basement
+       </p>
+       <button onclick="godark()">Get in the Mood</button>
+       <div class="textentry">
+       
+        <input type="text" id="name">
+       </div>
+       <button onclick="typeandscream()">Please don't click the button</button>
 
-        function Greetings(R){
-            document.getElementById("Demo").innerHTML="nice to meet you "+R;
+       <button onclick="finish()">Tell me what happened</button>
+
+        <audio id="audio" src="http://reboot-me.com/ouch.mp3" type="audio/mpeg"></audio>
+
+        <script>
+        function typeandscream(){
+        var personName=
+        document.getElementById("name").value;
+        alert("I told you not to do that");
+        }
+        function godark(){
+            document.body.className="dark";
         }
 
-       Greetings(" Tchiyna");
+        function finish(){
+            document.getElementById("story").innerHTML="I got you!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+        }
+        
 
-       Greetings(" Alcino");
+
+
 
         </script>
+
     </body>
 </html>
